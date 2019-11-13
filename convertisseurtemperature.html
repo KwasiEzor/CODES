@@ -1,0 +1,31 @@
+<meta charset="utf-8">
+<script>
+/**
+ *Programme pour convertir une température 
+ *de degré Celsius en Fahrenheit
+ *et inversement
+ *
+ */
+ 
+ //déclarations des varibles
+ 
+ var donneeCelsius, conversionFahr;
+ var donneeFahren, conversionCelsius;
+ 
+ // lecture des données
+do{ 
+	do{ donneeCelsius = parseFloat(prompt('Température °F'))
+	}while(isNaN(donneeCelsius)|| donneeCelsius >9999 || donneeCelsius<-9999); 
+	 do{donneeFahren = parseFloat(prompt('Température °C'))
+	 }while (isNaN(donneeFahren)|| donneeFahren >9999 || donneeFahren<-9999); 
+	 
+	// traitement des données
+	conversionFahr = (donneeCelsius *1.8)+32;
+	conversionCelsius = (donneeFahren - 32)/1.8;
+
+	//affichage du résultat
+
+	document.write('<p> '+donneeCelsius+ ' °C correspond à '+conversionFahr+' °F</p>');
+	document.write('<p> '+donneeFahren+ ' °F correspond à '+conversionCelsius+' °C</p>');
+}while(confirm('voulez-vous recommencer ?'));
+</script>
